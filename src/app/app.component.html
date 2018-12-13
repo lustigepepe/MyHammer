@@ -9,8 +9,8 @@
         </thead>
         <tbody>
           <tr class="border-bottom" *ngFor="let da of data">
-            <td class="border-right">{{da.title}} <br>{{da.city}}</td>
-            <td></td>
+            <td class="border-right">{{da.title}} <br>{{da.city}} {{data.length}}</td>
+            <td [attr.rowspan]="data.length"></td>
           </tr>
         </tbody>
       </table>
