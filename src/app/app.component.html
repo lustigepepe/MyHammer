@@ -8,10 +8,10 @@
           </tr>
         </thead>
         <tbody>
-          <tr class="border-bottom" *ngFor="let da of data">
-            <td class="border-right">{{da.title}} <br>{{da.city}} {{data.length}}</td>
-            <td [attr.rowspan]="data.length"></td>
-          </tr>
+          <tr *ngFor="let da of data">
+            <td class="border-right">{{da.title}} <br>{{da.city}}</td>
+            <td></td>
+        </tr>
         </tbody>
       </table>
     </div>
