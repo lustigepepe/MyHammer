@@ -1,0 +1,17 @@
+.whole-side {
+  background-color: #dde2e6
+}
+
+.adjust-container {
+  padding-top: 4%;
+}
+
+.table-setting {
+  background-color: #ffffff;
+ 
+}
+
+th,
+td {
+  width: 50%;
+}

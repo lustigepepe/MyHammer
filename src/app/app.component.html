@@ -1,0 +1,18 @@
+<div class="whole-side">
+    <div class="container adjust-container">
+      <table class="table table-setting table-borderless text-center">
+        <thead>
+          <tr class="border-bottom">
+            <th>Jobs</th>
+            <th class="border-left">Detail</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="border-bottom" *ngFor="let da of data">
+            <td class="border-right">{{da.title}} <br>{{da.city}}</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+</div>
