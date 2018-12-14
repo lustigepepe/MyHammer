@@ -24,7 +24,5 @@ export class AppComponent implements OnInit {
     this.description = "description: " + data.description
     this.end_date = data.end_date;
     this.created_at = data.created_at;
-    console.log(data.id);
-    // console.log(event.currentTarget);
   }
 }

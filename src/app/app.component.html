@@ -12,7 +12,8 @@
       <div class="row body-grid">
         <div class="col-sm">
           <div class="row-grid" *ngFor="let da of data" (click)="selectJob(da)">
-            <div>{{da.title}} <br>{{da.city}}</div>
+            <div id="title"> {{da.title}}</div>
+            <div>{{da.city}}</div>
           </div>
         </div>
         <div class="col-sm detail-grid">
