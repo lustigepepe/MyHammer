@@ -39,10 +39,10 @@ describe('AppComponent', () => {
     // job.created_at = '';
     // job.description = 'uuUU';
     // job.end_date = '';
-    job.title = 'JoobTest';
+    job.title = 'JobTest';
     aComSpy.selectJob(job);
   
-    expect(aComSpy.title).toBe('JoobTest');
+    expect(aComSpy.title).toBe('JobTest');
   }));
 
 });

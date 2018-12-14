@@ -33,6 +33,7 @@
 }
 .detail-item {
   padding-bottom: 6px;
+  font-weight: bold;
 }
 
 @media only screen and (max-width: 600px) {
