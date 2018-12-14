@@ -1,18 +1,29 @@
 <div class="whole-side">
-    <div class="container adjust-container">
-      <table class="table table-setting table-borderless text-center">
-        <thead>
-          <tr class="border-bottom">
-            <th>Jobs</th>
-            <th class="border-left">Detail</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr *ngFor="let da of data">
-            <td class="border-right">{{da.title}} <br>{{da.city}}</td>
-            <td></td>
-        </tr>
-        </tbody>
-      </table>
+  <div class="container adjust-container text-center">
+    <div class="job-grid-setting">
+      <div class="row header">
+        <div class="col-sm border-bottom">
+          Jobs
+        </div>
+        <div class="col-sm border-bottom">
+          Details
+        </div>
+      </div>
+      <div class="row body-grid">
+        <div class="col-sm">
+          <div class="row-grid" *ngFor="let da of data" (click)="selectJob(da)">
+            <div>{{da.title}} <br>{{da.city}}</div>
+          </div>
+        </div>
+        <div class="col-sm detail-grid">
+          <div class="detail-item">
+            {{title}}
+          </div>
+          <div *ngIf="description">{{description}} </div>
+          <div *ngIf="created_at"> created time: {{created_at | date: 'short'}}</div>
+          <div *ngIf="end_date"> end time: {{end_date | date: 'short'}} </div>
+        </div>
+      </div>
     </div>
+  </div>
 </div>

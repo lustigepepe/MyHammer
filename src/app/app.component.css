@@ -6,12 +6,40 @@
   padding-top: 4%;
 }
 
-.table-setting {
+.job-grid-setting {
   background-color: #ffffff;
- 
+  padding-top: 12px;
 }
 
-th,
-td {
-  width: 50%;
+.header {
+  font-weight: bold;
 }
+
+.row-grid {
+  padding-bottom: 12px;
+}
+
+.body-grid {
+  padding: 12px;
+  min-height: 80vh;
+
+}
+
+.detail-grid {
+  margin: 0 12px 0 12px;
+  border-left: 1px solid #dde2e6;
+
+}
+.detail-item {
+  padding-bottom: 6px;
+}
+
+@media only screen and (max-width: 600px) {
+  .detail-grid {
+    padding-top: 12px;
+    border-top: 1px solid #dde2e6;
+    border-left: none;
+  }
+
+}
+
