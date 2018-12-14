@@ -33,7 +33,6 @@ describe('AppComponent', () => {
   it('should set up detail data', async(() => {
     // I need that data only one time 
     // that's why I define it in that test 
-    let allData = comp.job[0];
     let aComSpy = fixture.debugElement.injector.get(AppComponent) as AppComponent;
     let job = new Job();
     // job.city = 'Berlin';
