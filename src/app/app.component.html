@@ -11,9 +11,9 @@
       </div>
       <div class="row body-grid">
         <div class="col-sm">
-          <div class="row-grid" *ngFor="let da of data" (click)="selectJob(da)">
-            <div id="title"> {{da.title}}</div>
-            <div>{{da.city}}</div>
+          <div class="row-grid" *ngFor="let jo of job" (click)="selectJob(jo)">
+            <div> {{jo.title}}</div>
+            <div>{{jo.city}}</div>
           </div>
         </div>
         <div class="col-sm detail-grid">

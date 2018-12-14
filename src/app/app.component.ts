@@ -1,5 +1,5 @@
-import { Component, OnInit, Input } from '@angular/core';
-
+import { Component, OnInit } from '@angular/core';
+import { Job, JsonClass } from './json.data';
 import { DataPromiseService } from './services/data.promis.service';
 
 @Component({
@@ -8,7 +8,7 @@ import { DataPromiseService } from './services/data.promis.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  data: Array<Object> = [];
+  job: Job[] = [];
   title: string = null;
   description: string = null;
   end_date: string = null;
@@ -17,12 +17,13 @@ export class AppComponent implements OnInit {
   constructor(private dataService: DataPromiseService) { }
   ngOnInit(): void {
     this.dataService.getJsonData()
-      .then(data => { this.data = data.body, console.log(data.body) });
+      .then(data => { this.job = data.body, console.log(data.body) });
   }
-  selectJob(data) {
-    this.title = data.title;
-    this.description = "description: " + data.description
-    this.end_date = data.end_date;
-    this.created_at = data.created_at;
+
+  selectJob(job) {
+    this.title = job.title;
+    this.description = "description: " + job.description
+    this.end_date = job.end_date;
+    this.created_at = job.created_at;
   }
 }

@@ -1,5 +1,6 @@
-import { TestBed, ComponentFixture, async } from '@angular/core/testing';
+import { TestBed, ComponentFixture, async, tick } from '@angular/core/testing';
 import { AppComponent } from './app.component';
+import { Job, JsonClass } from './json.data';
 
 import { HttpClientModule } from '@angular/common/http';
 let comp: AppComponent;
@@ -15,6 +16,7 @@ describe('AppComponent', () => {
       ], imports: [
         HttpClientModule,
       ],
+
     }).compileComponents();
   }));
 
@@ -24,8 +26,24 @@ describe('AppComponent', () => {
     expect(comp).toBeTruthy();
   }));
 
-  it('should receive all jobs data', async(() => {
-    expect(comp.data).toBeTruthy();
+  it('should receive all jobs', async(() => {
+    expect(comp.job).toBeTruthy();
+  }));
+
+  it('should set up detail data', async(() => {
+    // I need that data only one time 
+    // that's why I define it in that test 
+    let allData = comp.job[0];
+    let aComSpy = fixture.debugElement.injector.get(AppComponent) as AppComponent;
+    let job = new Job();
+    // job.city = 'Berlin';
+    // job.created_at = '';
+    // job.description = 'uuUU';
+    // job.end_date = '';
+    job.title = 'JoobTest';
+    aComSpy.selectJob(job);
+  
+    expect(aComSpy.title).toBe('JoobTest');
   }));
 
 });
