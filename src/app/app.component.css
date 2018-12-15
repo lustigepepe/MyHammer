@@ -36,12 +36,11 @@
   font-weight: bold;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 550px) {
   .detail-grid {
     padding-top: 12px;
     border-top: 1px solid #dde2e6;
     border-left: none;
   }
-
 }
 

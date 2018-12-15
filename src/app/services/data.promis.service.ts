@@ -17,7 +17,7 @@ export class DataPromiseService {
             .catch(error => this.handleError(error));
     }
     
-    private handleError(error: any): Promise<any> {
+    handleError(error: any): Promise<any> {
         console.error('An error occurred within getJsonData(): ', error);
         return Promise.reject(error.message || error);
     }
