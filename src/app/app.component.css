@@ -36,6 +36,10 @@
   font-weight: bold;
 }
 
+.details {
+  padding-top: 12px;
+}
+
 @media only screen and (max-width: 550px) {
   .detail-grid {
     padding-top: 12px;

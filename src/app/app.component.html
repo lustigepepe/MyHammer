@@ -21,8 +21,8 @@
             {{title}}
           </div>
           <div *ngIf="description">{{description}} </div>
-          <div *ngIf="created_at"> created time: {{created_at | date: 'short'}}</div>
-          <div *ngIf="end_date"> end time: {{end_date | date: 'short'}} </div>
+          <div class="details" *ngIf="created_at"> created time: {{created_at | date: 'short'}}</div>
+          <div class="details" *ngIf="end_date"> end time: {{end_date | date: 'short'}} </div>
         </div>
       </div>
     </div>
