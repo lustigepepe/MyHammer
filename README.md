@@ -1,6 +1,6 @@
 # Myhammer
 
-Please change to folder myhammer and run `ng serve` to start the app
+Please change to folder myhammer and run `npm install` then `ng serve` to start the app
 or test it with `ng test`.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.1.5.
